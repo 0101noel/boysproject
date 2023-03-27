@@ -9,7 +9,7 @@ import AboutPage from './pages/AboutPage';
 import MaterialsPage from './pages/MaterialsPage';
 import ProductionTeamPage from './pages/ProductionTeamPage';
 import ProjectPage from './pages/ProjectPage';
-import SignInPage from './pages/SignInPage';
+import SignInPage from './pages/LoginSignUpSection';
 import BuyMaterialsPage from './pages/BuyMaterialsPage';
 import PaymentPage from './pages/PaymentPage';
 

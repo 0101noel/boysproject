@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import './ProductionTeamPage.css'
 
 function ProductionTeamPage() {
   const [features] = useState([
@@ -75,7 +76,7 @@ function ProductionTeamPage() {
                     I wanted to introduce you to our team who has an extensive background in modular cabinet production, and they will bring their experience and skills to our projects. They have a passion for the production and intend to adopt a more sustainable approach to our marketing in the future. I'm sure you will all work with them to ensure a wonderful experience for our company.
                     <br />
                     <br />
-                    Cheers,
+                    Cheers.
                   </p>
                 </div>
               </Col>

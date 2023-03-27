@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Carousel } from 'react-bootstrap';
+import './MaterialPage.css'
 
 const MaterialsPage = () => {
   const [index, setIndex] = useState(0);

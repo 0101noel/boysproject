@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router';
+import './BuyMaterialsPage.css'
 
 const P2500 = '₱2500';
 const P3000 = '₱3000';

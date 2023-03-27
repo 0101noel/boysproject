@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import './ProjectPage.css'
 
 const Project = () => {
   const [projects] = useState([

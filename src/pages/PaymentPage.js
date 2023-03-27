@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { useNavigate, useLocation } from 'react-router-dom';
+import './PaymentPage.css'
 
 function PaymentPage() {
   const location = useLocation();

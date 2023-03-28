@@ -22,6 +22,11 @@ function BuyMaterialsPage() {
     setCartItems([...cartItems, product]);
   };
 
+  const handleDelete = (itemId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCartItems);
+  };
+  
   const handleCheckout = () => {
     const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
     navigate('/payment', { state: { cartItems, totalPrice } });
@@ -112,9 +117,10 @@ function BuyMaterialsPage() {
                 <ul>
                   {cartItems.map((item) => (
                     <li key={item.id}>
-                      <span>{item.name}</span>
-                      <span>{item.price}</span>
-                    </li>
+                    <span>{item.name}</span>
+                    <span>{item.price}</span>
+                    <button onClick={() => handleDelete(item.id)}>Delete</button>
+                   </li>
                   ))}
                 </ul>
               )}

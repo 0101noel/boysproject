@@ -1,9 +1,13 @@
 .form-container {
   background: linear-gradient(to bottom, #BDBDBD, #000000); /* Add gradient background */
   border-radius: 10px;
-  padding: 30px;
+  padding: 40px 20px 40px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   color: white;
   animation: slide-up 0.6s ease-in-out; /* Add animation */
+  width: 500px;
 }
 
 @keyframes slide-up {

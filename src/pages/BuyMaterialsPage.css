@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 h2 {
@@ -27,10 +27,11 @@ li {
 
 button {
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #333;
   color: #fff;
   border: none;
   border-radius: 5px;
+  padding-left: 10px;
   padding: 10px 20px;
   font-size: 18px;
   transition: all 0.3s ease;
@@ -60,18 +61,19 @@ header {
 
 .cart-icon {
   cursor: pointer;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .whole-cart-window {
   position: absolute;
-  top: 70px;
-  right: 10px;
+  top: 150px;
+  right: 60px;
   width: 300px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   padding: 20px;
   border-radius: 5px;
+  z-index: 999; 
 }
 
 .cart-wrapper {
@@ -100,4 +102,20 @@ header {
 .card-img-top {
   height: 200px;
   object-fit: cover;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+  /* Shop section */
+  .shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 300px;
+    margin: 0 10px 30px;
+  }
 }

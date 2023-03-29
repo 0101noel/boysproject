@@ -31,13 +31,13 @@
     font-size: 1.5rem;
     padding: 1rem 3rem;
     margin-top: 2rem;
-    background-color: #2ecc71; /* set the background color of the button */
-    border-color: #2ecc71; /* set the border color of the button */
+    background-color: #333; /* set the background color of the button */
+    border-color: #333; /* set the border color of the button */
   }
   
   .caption button:hover {
-    background-color: #27ae60; /* change the background color of the button on hover */
-    border-color: #27ae60; /* change the border color of the button on hover */
+    background-color: #454948; /* change the background color of the button on hover */
+    border-color: #424443; /* change the border color of the button on hover */
     cursor: pointer;
   }
   

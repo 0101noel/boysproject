@@ -105,9 +105,11 @@ function BuyMaterialsPage() {
       <header style={{display: "flex", justifyContent: "center", marginTop: "15px" }}>
         <h1>AAC Material Shopping</h1>
         <div className="cart-box" style={{marginLeft: "auto", marginTop: "15px" }}>
-          <div className="cart-icon" onClick={toggleCart}>
-            <FontAwesomeIcon icon={faCartArrowDown} size="2x" />
-          </div>
+        <div className="cart-icon" onClick={toggleCart}>
+  <FontAwesomeIcon icon={faCartArrowDown} size="2x" />
+  <span className="cart-items">{cartItems.length}</span>
+</div>
+
           <div className={`whole-cart-window ${showCart ? '' : 'hide'}`}>
             <div className="cart-wrapper">
               <h2>Shopping Cart</h2>

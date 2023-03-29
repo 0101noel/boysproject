@@ -82,9 +82,10 @@ const NavBar = () => {
                 Contact
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Link to="auth" className="nav-link" onClick={() => setExpanded(false)}>
-                Login / Register
+            <Nav.Item>              
+              <Link to="/signin" className="nav-link" onClick={() => setExpanded(false)}>
+                Sign In/Log In
+
               </Link>
             </Nav.Item>
           </Nav>

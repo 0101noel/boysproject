@@ -1,43 +1,66 @@
-/* HomePage.css */
+.fullscreen-image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-#home {
-    height: 100%;
+.fullscreen-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.fullscreen-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fullscreen-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.fullscreen-image-text h1 {
+  font-size: 4rem;
+}
+
+.fullscreen-image-text h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .fullscreen-image-text h1 {
+    font-size: 3rem;
   }
-  
-  
-  
-  .caption {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    height: 100%;
-  }
-  
- 
-  
-  .caption h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-  }
-  
-  .caption h3 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-  }
-  
-  .caption button {
+
+  .fullscreen-image-text h3 {
     font-size: 1.5rem;
-    padding: 1rem 3rem;
-    margin-top: 2rem;
-    background-color: #333; /* set the background color of the button */
-    border-color: #333; /* set the border color of the button */
   }
-  
-  .caption button:hover {
-    background-color: #454948; /* change the background color of the button on hover */
-    border-color: #424443; /* change the border color of the button on hover */
-    cursor: pointer;
-  }
-  
+}
+.project-button {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  background-color: #333; 
+  border-color: #333; 
+}
+.project-button:hover {
+  background-color: #454948; 
+  border-color: #424443; 
+  cursor: pointer;
+}

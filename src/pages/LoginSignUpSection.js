@@ -9,32 +9,36 @@ function LoginSignUpSection() {
   const [name, setName] = useState('');
   const [isLogin, setIsLogin] = useState(true); // Set initial state to login
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const userData = { name, email, password };
     
     if (isLogin) {
-      // Login logic
-      const user = JSON.parse(localStorage.getItem(email));
-      if (user && user.password === password) {
+      try {
+        // Login logic
+        const response = await axios.post('/login', userData);
         console.log('Login successful');
         // Clear input fields and display success message
         setName('');
         setEmail('');
         setPassword('');
-      } else {
+      } catch (error) {
         console.log('Invalid email or password');
         // Display error message
       }
     } else {
-      // Signup logic
-      const user = { email, password };
-      localStorage.setItem(email, JSON.stringify(user));
-      console.log('Registration successful');
-      // Clear input fields and display success message
-      setName('');
-      setEmail('');
-      setPassword('');
+      try {
+        // Signup logic
+        const response = await axios.post('/signup', userData);
+        console.log('Registration successful');
+        // Clear input fields and display success message
+        setName('');
+        setEmail('');
+        setPassword('');
+      } catch (error) {
+        console.log('Error registering user:', error);
+        // Display error message
+      }
     }
   };
   

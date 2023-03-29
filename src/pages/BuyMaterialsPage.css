@@ -137,3 +137,17 @@ header {
     margin: 0 10px 30px;
   }
 }
+
+.addtocart, .checkout {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: 2rem;
+  background-color: #333; 
+  border-color: #333; 
+}
+
+.addtocart:hover, .checkout:hover {
+  background-color: #454948; 
+  border-color: #424443; 
+  cursor: pointer;
+}

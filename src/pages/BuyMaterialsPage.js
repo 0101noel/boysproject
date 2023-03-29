@@ -127,7 +127,7 @@ function BuyMaterialsPage() {
                 </ul>
               )}
             </div>
-            <Button onClick={handleCheckout} style={{ marginBottom: "15px" }}>Checkout</Button>
+            <Button className='checkout' onClick={handleCheckout} style={{ marginBottom: "15px" }}>Checkout</Button>
           </div>
         </div>
       </header>
@@ -143,7 +143,7 @@ function BuyMaterialsPage() {
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Text>{product.description}</Card.Text>
                     <Card.Text>{product.price}</Card.Text>
-                    <Button variant="primary" onClick={() => addToCart(product)}>Add to Cart</Button>
+                    <Button className='addtocart' variant="primary" onClick={() => addToCart(product)}>Add to Cart</Button>
                   </Card.Body>
                 </Card>
               </Col>

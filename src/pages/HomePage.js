@@ -39,11 +39,12 @@ const HomePage = () => {
                   </Button>
                 </div>
               </div>
+              </div>
             </Col>
           </Row>
         </Container>
       </section>
-    </div>
+      </div>
   );
 };
 

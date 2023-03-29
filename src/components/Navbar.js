@@ -82,16 +82,11 @@ const NavBar = () => {
                 Contact
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-
+            <Nav.Item>              
               <Link to="/signin" className="nav-link" onClick={() => setExpanded(false)}>
                 Sign In/Log In
-
-              <Link to="auth" className="nav-link" onClick={() => setExpanded(false)}>
-                Login / Register
-
               </Link>
-            </Nav.Item>
+           </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

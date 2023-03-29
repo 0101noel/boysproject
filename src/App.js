@@ -9,11 +9,8 @@ import AboutPage from './pages/AboutPage';
 import MaterialsPage from './pages/MaterialsPage';
 import ProductionTeamPage from './pages/ProductionTeamPage';
 import ProjectPage from './pages/ProjectPage';
-
-import SignInPage from './pages/LoginSignUpSection';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-
 import BuyMaterialsPage from './pages/BuyMaterialsPage';
 import PaymentPage from './pages/PaymentPage';
 import { Container, Row, Col } from 'react-bootstrap';

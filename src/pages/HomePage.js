@@ -25,10 +25,7 @@ const HomePage = () => {
             <Col lg={12} className="caption text-center">
               <div style={{ position: 'relative' }}>
 
-                <img src="./img/jen.jpg" alt="reception" className="fullscreen-image" style={{ width: '100%', height: 'auto' }} />
-                <div style={{ position: 'absolute', top: '150px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
-
-                <img src="img/jen.jpg" alt="reception" className="fullscreen-image" style={{ width: '100%', height: 'auto' }} />
+                <img src="img/jen.jpg" alt="reception" className="fullscreen-image" style={{ width: '100%', height: '100%' }} />
                 <div style={{ position: 'absolute', top: '100px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
                   <h1>
                     <strong>ALL ABOUT CABINETS</strong>
@@ -38,7 +35,6 @@ const HomePage = () => {
                     {buttonText}
                   </Button>
                 </div>
-              </div>
               </div>
             </Col>
           </Row>

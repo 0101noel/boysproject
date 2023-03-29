@@ -6,8 +6,9 @@ body {
 
 h1 {
   font-size: 36px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 20px;
+  
 }
 
 h2 {
@@ -63,6 +64,10 @@ header {
 .cart-icon {
   position: relative;
   margin-right: 45px;
+}
+
+.cart-icon:hover {
+  cursor: pointer;
 }
 
 .cart-items {

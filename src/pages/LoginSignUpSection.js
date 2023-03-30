@@ -1,50 +1,59 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import axios from 'axios';
-import './LoginSignUpSection.css'
+import './LoginSignUpSection.css';
+import { getUser, setUser } from './localStorage';
+
 
 function LoginSignUpSection() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
-  const [isLogin, setIsLogin] = useState(true); // Set initial state to login
+  const [isLogin, setIsLogin] = useState(true);
+  const [error, setError] = useState('');
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const userData = { name, email, password };
-    
+    let users = getUser();
+
     if (isLogin) {
-      try {
-        // Login logic
-        const response = await axios.post('/login', userData);
+      // Login logic
+      const user = users.find((user) => user.email === email && user.password === password);
+      if (user) {
         console.log('Login successful');
         // Clear input fields and display success message
         setName('');
         setEmail('');
         setPassword('');
-      } catch (error) {
+        setError('');
+      } else {
         console.log('Invalid email or password');
         // Display error message
+        setError('Invalid email or password');
       }
     } else {
-      try {
-        // Signup logic
-        const response = await axios.post('/signup', userData);
+      // Signup logic
+      const userExists = users.find((user) => user.email === email);
+      if (userExists) {
+        console.log('User already exists');
+        // Display error message
+        setError('User already exists');
+      } else {
+        users.push(userData);
+        setUser(users);
         console.log('Registration successful');
         // Clear input fields and display success message
         setName('');
         setEmail('');
         setPassword('');
-      } catch (error) {
-        console.log('Error registering user:', error);
-        // Display error message
+        setError('');
+        setIsLogin(true);
       }
     }
   };
-  
 
   const handleToggle = () => {
-    setIsLogin(!isLogin); // Toggle state between login and sign up
+    setIsLogin(!isLogin);
   };
 
   return (
@@ -96,6 +105,7 @@ function LoginSignUpSection() {
                   Already have an account? Sign in
                 </Button>
               )}
+              {error && <div className="error">{error}</div>}
             </Form>
           </div>
         </Col>

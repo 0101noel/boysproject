@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
+import './BuyMaterialsPage.css'
 
 const P2500 = '₱2500';
 const P3000 = '₱3000';
@@ -21,6 +22,11 @@ function BuyMaterialsPage() {
     setCartItems([...cartItems, product]);
   };
 
+  const handleDelete = (itemId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCartItems);
+  };
+  
   const handleCheckout = () => {
     const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
     navigate('/payment', { state: { cartItems, totalPrice } });
@@ -99,9 +105,11 @@ function BuyMaterialsPage() {
       <header style={{display: "flex", justifyContent: "center", marginTop: "15px" }}>
         <h1>AAC Material Shopping</h1>
         <div className="cart-box" style={{marginLeft: "auto", marginTop: "15px" }}>
-          <div className="cart-icon" onClick={toggleCart}>
-            <FontAwesomeIcon icon={faCartArrowDown} size="2x" />
-          </div>
+        <div className="cart-icon" onClick={toggleCart}>
+  <FontAwesomeIcon icon={faCartArrowDown} size="2x" />
+  <span className="cart-items">{cartItems.length}</span>
+</div>
+
           <div className={`whole-cart-window ${showCart ? '' : 'hide'}`}>
             <div className="cart-wrapper">
               <h2>Shopping Cart</h2>
@@ -111,14 +119,15 @@ function BuyMaterialsPage() {
                 <ul>
                   {cartItems.map((item) => (
                     <li key={item.id}>
-                      <span>{item.name}</span>
-                      <span>{item.price}</span>
-                    </li>
+                    <span>{item.name}</span>
+                    <span>{item.price}</span>
+                    <button onClick={() => handleDelete(item.id)}>Delete</button>
+                   </li>
                   ))}
                 </ul>
               )}
             </div>
-            <Button onClick={handleCheckout} style={{ marginBottom: "15px" }}>Checkout</Button>
+            <Button className='checkout' onClick={handleCheckout} style={{ marginBottom: "15px" }}>Checkout</Button>
           </div>
         </div>
       </header>
@@ -134,7 +143,7 @@ function BuyMaterialsPage() {
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Text>{product.description}</Card.Text>
                     <Card.Text>{product.price}</Card.Text>
-                    <Button variant="primary" onClick={() => addToCart(product)}>Add to Cart</Button>
+                    <Button className='addtocart' variant="primary" onClick={() => addToCart(product)}>Add to Cart</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -147,3 +156,4 @@ function BuyMaterialsPage() {
 }
 
 export default BuyMaterialsPage;
+

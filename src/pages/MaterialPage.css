@@ -1,0 +1,57 @@
+/* Add a background color and padding to the component */
+#mat {
+    background-color: #f6f4f1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  /* Style the heading */
+  .heading {
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    color: #423c3c;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the text */
+  .narrow p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #423c3c;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  
+  /* Style the carousel */
+  #myCarousel {
+    margin-top: 50px;
+  }
+  
+  /* Style the carousel indicators */
+  .carousel-indicators li {
+    background-color: #423c3c;
+    border: 1px solid #423c3c;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #f6f4f1;
+  }
+  
+  /* Style the carousel captions */
+  .carousel-caption p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f6f4f1;
+    background-color: #423c3c;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  /* Style the carousel images */
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+  

@@ -1,0 +1,153 @@
+/* General styles */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 40px;
+  margin-left: 20px;
+  
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+.hide {
+  display: none;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.cart-box {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  position: relative;
+  margin-right: 45px;
+}
+
+.cart-icon:hover {
+  cursor: pointer;
+}
+
+.cart-items {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 12px;
+}
+
+
+.whole-cart-window {
+  position: absolute;
+  top: 150px;
+  right: 60px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999; 
+}
+
+.cart-wrapper {
+  margin-bottom: 20px;
+}
+
+/* Shop section */
+
+.shop-section {
+  margin-top: 30px;
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+  /* Shop section */
+  .shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 300px;
+    margin: 0 10px 30px;
+  }
+}
+
+.addtocart, .checkout {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: 2rem;
+  background-color: #333; 
+  border-color: #333; 
+}
+
+.addtocart:hover, .checkout:hover {
+  background-color: #454948; 
+  border-color: #424443; 
+  cursor: pointer;
+}

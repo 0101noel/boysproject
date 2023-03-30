@@ -1,0 +1,43 @@
+.PaymentPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    width: 700px;
+  }
+  
+  .PaymentPage h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .PaymentPage form {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .PaymentPage form label {
+    font-weight: bold;
+  }
+  
+  .PaymentPage form button[type="submit"] {
+    margin-top: 2rem;
+    width: 100%;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .PaymentPage form button[type="submit"]:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+  

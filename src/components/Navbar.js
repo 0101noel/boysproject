@@ -84,7 +84,7 @@ const NavBar = () => {
             </Nav.Item>
             <Nav.Item>              
               <Link to="/signin" className="nav-link" onClick={() => setExpanded(false)}>
-                Sign In/Log In
+                Sign Up/Sign In
 
               </Link>
             </Nav.Item>

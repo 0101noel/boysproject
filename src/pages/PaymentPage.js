@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function PaymentPage() {
   const location = useLocation();
@@ -14,14 +14,15 @@ function PaymentPage() {
     address: ''
   });
 
-  const navigate = useNavigate();
+  const [paymentSuccessful, setPaymentSuccessful] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     // TODO: Handle payment submission here
 
-    navigate('/');
+    localStorage.setItem('paymentInfo', JSON.stringify(paymentInfo));
+    setPaymentSuccessful(true);
   };
 
   const handleInputChange = (event) => {
@@ -31,6 +32,18 @@ function PaymentPage() {
       [name]: value
     }));
   };
+
+  useEffect(() => {
+    const paymentInfoString = localStorage.getItem('paymentInfo');
+    if (paymentInfoString) {
+      const paymentInfo = JSON.parse(paymentInfoString);
+      setPaymentInfo(paymentInfo);
+    }
+
+    return () => {
+      localStorage.removeItem('paymentInfo');
+    };
+  }, []);
 
   return (
     <div className="PaymentPage">
@@ -74,6 +87,7 @@ function PaymentPage() {
           <Button variant="primary" type="submit">
             Pay
           </Button>
+          {paymentSuccessful && <p>Successful</p>}
         </Form>
       </Container>
     </div>

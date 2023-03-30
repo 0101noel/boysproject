@@ -96,9 +96,9 @@ function BuyMaterialsPage() {
 
   return (
     <div className="BuyMaterialsPage">
-      <header style={{display: "flex", justifyContent: "center", marginTop: "15px" }}>
-        <h1>AAC Material Shopping</h1>
-        <div className="cart-box" style={{marginLeft: "auto", marginTop: "15px" }}>
+      <header style={{ display: "flex", justifyContent: "center", marginTop: "15px" }}>
+        <h1 style={{ marginRight: "auto", marginLeft: "20px" }}>AAC Material Shopping</h1>
+        <div className="cart-box" style={{ marginLeft: "auto", marginRight: "20px", marginTop: "15px" }}>
           <div className="cart-icon" onClick={toggleCart}>
             <FontAwesomeIcon icon={faCartArrowDown} size="2x" />
           </div>
@@ -122,7 +122,7 @@ function BuyMaterialsPage() {
           </div>
         </div>
       </header>
-
+      
       <section className="shop-section">
         <Container>
           <Row>
